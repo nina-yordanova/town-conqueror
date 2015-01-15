@@ -1,0 +1,18 @@
+.ui-page .ui-header, .ui-page .ui-footer {
+  height            : 50px !important;
+  background-color  : #9EB004 !important;
+  color             : #691C00 !important;
+}
+.ui-page .ui-header h1 {
+  font-size   : 18px;
+  font-weight : bold;
+  text-align  : left;
+  text-shadow : none;
+  margin      : 0px 0px 0px 10px;
+}
+.ui-page .ui-footer .btn {
+  background-color  : #264914;
+  color             : #fff;
+  box-shadow        : none;
+  margin-left       : -25px;
+}
