@@ -974,7 +974,7 @@ function processMessage(message) {
             }
             cordova.callbackFromNative(callbackId, success, status, [payload], keepCallback);
         } else {
-            console.log("processMessage failed: invalid message:" + message);
+            //console.log("processMessage failed: invalid message:" + message);
         }
     } catch (e) {
         console.log("processMessage failed: Message: " + message);
@@ -4181,7 +4181,7 @@ define("cordova/plugin/android/promptbasednativeapi", function(require, exports,
 
 module.exports = {
     exec: function(service, action, callbackId, argsJson) {
-        return prompt(argsJson, 'gap:'+JSON.stringify([service, action, callbackId]));
+        return /* prompt(argsJson, 'gapa:'+JSON.stringify([service, action, callbackId]))*/;
     },
     setNativeToJsBridgeMode: function(value) {
         prompt(value, 'gap_bridge_mode:');

@@ -1,5 +1,5 @@
 .ui-page .ui-header, .ui-page .ui-footer {
-  height            : 50px !important;
+  height            : 60px !important;
   background-color  : #9EB004 !important;
   color             : #691C00 !important;
 }
@@ -7,12 +7,43 @@
   font-size   : 18px;
   font-weight : bold;
   text-align  : left;
-  text-shadow : none;
-  margin      : 0px 0px 0px 10px;
+  text-shadow : 1px 1px 1px #000000;
+  margin      : 5px 0px 0px 15px;
 }
 .ui-page .ui-footer .btn {
   background-color  : #264914;
   color             : #fff;
   box-shadow        : none;
-  margin-left       : -25px;
+  margin-left       : -40px;
+  margin-top        : 12px;
+  padding           : 10px 25px;
+  border-radius     : 8px;
+}
+/* placeholder color */
+.ui-input-text input::-moz-placeholder,
+.ui-input-text input::-webkit-input-placeholder,
+.ui-input-search input::-moz-placeholder,
+.ui-input-search input::-webkit-input-placeholder,
+textarea.ui-input-text::-moz-placeholder,
+textarea.ui-input-text::-webkit-input-placeholder {
+    color : #264914 !important;
+}
+.ui-input-text,textarea {
+  border-color : #43911A !important;
+  margin: 0 auto;
+  width: 80%;
+}
+.ui-mobile label {
+  color       : #264914;
+  text-shadow : 1px 1px 1px;
+  margin      : 10px auto;
+  width       : 80%;
+}
+.avatar {
+  border  : 1px solid #ccc;
+}
+.avatar p {
+  color       : #ccc;
+  text-align  : center;
+  height      : 80px;
 }
