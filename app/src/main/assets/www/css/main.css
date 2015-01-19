@@ -47,3 +47,12 @@ textarea.ui-input-text::-webkit-input-placeholder {
   text-align  : center;
   height      : 80px;
 }
+.error {
+  color : #691C00 ;
+}
+p.error {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px auto;
+  width: 80%;
+}
