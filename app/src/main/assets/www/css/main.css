@@ -1,3 +1,7 @@
+.center {
+  margin: 10px auto !important;
+  width: 80% !important;
+}
 .ui-page .ui-header, .ui-page .ui-footer {
   height            : 60px !important;
   background-color  : #9EB004 !important;
@@ -36,8 +40,6 @@ textarea.ui-input-text::-webkit-input-placeholder {
 .ui-mobile label {
   color       : #264914;
   text-shadow : 1px 1px 1px;
-  margin      : 10px auto;
-  width       : 80%;
 }
 .avatar {
   border  : 1px solid #ccc;
@@ -53,6 +55,23 @@ textarea.ui-input-text::-webkit-input-placeholder {
 p.error {
   font-weight: bold;
   font-size: 16px;
-  margin: 10px auto;
-  width: 80%;
 }
+.user-info {
+  color       : #691C00;
+  text-align  : center;
+}
+.user-info span {
+  color       : #264914;
+  text-shadow : 1px 1px 1px;
+}
+.buttons-group {
+  text-align  : center;
+}
+.buttons-group.center a {
+  color           : #264914;
+  text-shadow     : 1px 1px 1px;
+  border          : 2px solid #264914;
+  border-radius   : 15px;
+  text-transform  : capitalize;
+}
+.ui-icon {background-color:#9EB004 !important}

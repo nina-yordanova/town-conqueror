@@ -1,30 +1,31 @@
 $(function(){
   localStorage.username = "";
   $( "#loginBtn" ).bind( "tap", submitLogin );
+  $( "#achievements, #my-places, #my-trips" ).bind( "tap", underConstruction);
+
 
   function submitLogin( event ){
     localStorage.mail     = $('#mail').val();
     localStorage.username = $('#username').val();
     localStorage.password = $('#password').val();
-
     if(localStorage.mail != "" && localStorage.username != "" && localStorage.password != ""){
       $.mobile.changePage("#home");
-      var lat = navigator.geolocation.getCurrentPosition(geolocationOnSuccess, geolocationOnError);
-      $( ".username" ).text( localStorage.username + " " + lat);
-
+      if (navigator.geolocation) {
+       navigator.geolocation.getCurrentPosition(geolocationOnSuccess, geolocationOnError);
+        $( ".username" ).text( localStorage.username );
+      }
     }
     else {
-      $( ".error" ).text( "Ппопълнете полетата" );
+      $( ".error" ).text( "All fields are required" );
     }
   };
   function geolocationOnSuccess (position) {
-    alert("OK");
-    alert(position.coords.latitude,position.coords.longitude);
-    return position.coords.latitude;
+    $( ".place" ).text( position.coords.latitude+ ", " + position.coords.longitude);
   };
   function geolocationOnError (error) {
-    alert("ERROR");
     alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
-    return error;
+  };
+  function underConstruction () {
+    alert('This page is under construction');
   };
 });
