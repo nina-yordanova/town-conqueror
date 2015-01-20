@@ -74,4 +74,6 @@ p.error {
   border-radius   : 15px;
   text-transform  : capitalize;
 }
-.ui-icon {background-color:#9EB004 !important}
+.ui-icon {
+  background-color:#9EB004 !important;
+}

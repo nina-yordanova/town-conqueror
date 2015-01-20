@@ -2,6 +2,7 @@ $(function(){
   localStorage.username = "";
   $( "#loginBtn" ).bind( "tap", submitLogin );
   $( "#achievements, #my-places, #my-trips" ).bind( "tap", underConstruction);
+  $( "#new-trip" ).bind( "tap", newTripBtn);
 
 
   function submitLogin( event ){
@@ -27,5 +28,8 @@ $(function(){
   };
   function underConstruction () {
     alert('This page is under construction');
+  };
+  function newTripBtn( event ){
+    $.mobile.changePage("#newTrip");
   };
 });
