@@ -1,3 +1,6 @@
+body {
+  text-transform  : none;
+}
 .center {
   margin: 10px auto !important;
   width: 80% !important;
@@ -32,7 +35,7 @@ textarea.ui-input-text::-moz-placeholder,
 textarea.ui-input-text::-webkit-input-placeholder {
     color : #264914 !important;
 }
-.ui-input-text,textarea {
+.ui-input-text,textarea, .ui-select, .ui-radio {
   border-color : #43911A !important;
   margin: 0 auto;
   width: 80%;
@@ -76,4 +79,7 @@ p.error {
 }
 .ui-icon {
   background-color:#9EB004 !important;
+}
+.ui-field-contain {
+  border  : none;
 }

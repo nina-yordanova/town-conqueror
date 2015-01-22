@@ -24,6 +24,7 @@
   <meta name = "viewport"
         content = "user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
   <link rel = "stylesheet" href = "http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+  <link rel="stylesheet" href="http://cdn.rawgit.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.css">
   <link rel = "stylesheet" type = "text/css" href = "css/index.css"/>
   <link rel = "stylesheet" type = "text/css" href = "css/main.css"/>
   <title>Town Conqueror</title>
@@ -103,7 +104,7 @@
     <!-- /header -->
 
     <div role = "main" class = "ui-content">
-      <form>
+      <form class="center">
         <fieldset>
           <input type="radio" name="location" id="currentLocation" value="currentLocation" checked="checked"/>
           <label for="currentLocation">Use current location <span class="coordinates"></span></label>
@@ -111,17 +112,16 @@
           <label for="selectLocation">Select location</label>
         </fieldset>
         <div class="ui-field-contain">
-          <label for="selectCountry">Select country</label>
-          <select name="select-country" id="selectCountry">
+          <select name="select-country" id="selectCountry" class="selectedLocation">
             <option value="1">Select Country</option>
           </select>
         </div>
         <div class="ui-field-contain">
-          <label for="selectCity">Select City</label>
-          <select name="select-city" id="selectCity">
-            <option value="1">Select Country</option>
+          <select name="select-city" id="selectCity" class="selectedLocation">
+            <option value="1">Select City</option>
           </select>
         </div>
+        <input type="text" data-role="date" data-icon="grid" data-iconpos="left">
       </form>
     </div>
     <!-- /content -->
@@ -140,6 +140,8 @@
   <script type = "text/javascript" src = "cordova.js"></script>
   <script src = "http://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src = "http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="http://cdn.rawgit.com/jquery/jquery-ui/1.10.4/ui/jquery.ui.datepicker.js"></script>
+  <script id="mobile-datepicker" src="http://cdn.rawgit.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.js"></script>
   <script type = "text/javascript" src = "js/index.js"></script>
   <script type = "text/javascript" src = "js/main.js"></script>
   <script type = "text/javascript">
