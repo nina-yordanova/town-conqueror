@@ -1,12 +1,12 @@
 $(function(){
   localStorage.username = "";
   $( "#loginBtn" ).bind( "tap", submitLogin );
-  $( "#achievements, #my-places, #my-trips" ).bind( "tap", underConstruction);
   $( "input[name='location']" ).bind( "change", useLocation );
   if($("input[name='location']" ).val() == "currentLocation") {
     $(".selectedLocation").addClass('ui-state-disabled');
   }
-
+  $( ".coordinates" ).text ("("+localStorage.latitude +" , "+localStorage.longitude+")");
+  
 
   function submitLogin( event ){
     localStorage.mail     = $('#mail').val();
@@ -24,13 +24,12 @@ $(function(){
     }
   };
   function geolocationOnSuccess (position) {
+    localStorage.latitude = position.coords.latitude;
+    localStorage.longitude = position.coords.longitude;
     $( ".place" ).text( position.coords.latitude+ ", " + position.coords.longitude);
   };
   function geolocationOnError (error) {
     alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
-  };
-  function underConstruction () {
-    alert('This page is under construction');
   };
   function useLocation () {
     if($(this).val() == "currentLocation") {

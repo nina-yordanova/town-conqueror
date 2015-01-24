@@ -24,7 +24,7 @@
   <meta name = "viewport"
         content = "user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
   <link rel = "stylesheet" href = "http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-  <link rel="stylesheet" href="http://cdn.rawgit.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.css">
+  <link rel = "stylesheet" href = "http://cdn.rawgit.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.css">
   <link rel = "stylesheet" type = "text/css" href = "css/index.css"/>
   <link rel = "stylesheet" type = "text/css" href = "css/main.css"/>
   <title>Town Conqueror</title>
@@ -82,9 +82,13 @@
       </div>
       <div class="buttons-group center">
         <a href="#firstStep" class="ui-btn ui-btn-inline ui-icon ui-icon-navigation ui-btn-icon-top" id="new-trip">New Trip</a>
-        <a href="#" class="ui-btn ui-btn-inline ui-icon ui-icon-location ui-btn-icon-top" id="my-trips">My Trips</a>
-        <a href="#" class="ui-btn ui-btn-inline ui-icon ui-icon-heart ui-btn-icon-top" id="my-places">My Places</a>
-        <a href="#" class="ui-btn ui-btn-inline ui-icon ui-icon-star ui-btn-icon-top" id="achievements">Achievements</a>
+        <a href="#popupUnderConstruction" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline ui-icon ui-icon-location ui-btn-icon-top" id="my-trips">My Trips</a>
+        <a href="#popupUnderConstruction" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline ui-icon ui-icon-heart ui-btn-icon-top" id="my-places">My Places</a>
+        <a href="#popupUnderConstruction" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline ui-icon ui-icon-star ui-btn-icon-top" id="achievements">Achievements</a>
+      </div>
+      <div data-role="popup" id="popupUnderConstruction" class="ui-content" style="width:200px;height:100px;" data-overlay-theme="a" data-theme="b">
+        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <p style="color: #9eb004;font-size: 16px;font-weight: bold;margin-top: 30px;text-align: center;text-shadow: 1px 0 0 #000000;">This page is under construction.</p>
       </div>
     </div>
     <!-- /content -->
@@ -107,7 +111,7 @@
       <form class="center">
         <fieldset>
           <input type="radio" name="location" id="currentLocation" value="currentLocation" checked="checked"/>
-          <label for="currentLocation">Use current location <span class="coordinates"></span></label>
+          <label for="currentLocation">Use current location <p class="coordinates"></p></label>
           <input type="radio" name="location" id="selectLocation" value="selectLocation"/>
           <label for="selectLocation">Select location</label>
         </fieldset>
@@ -121,8 +125,45 @@
             <option value="1">Select City</option>
           </select>
         </div>
-        <input type="text" data-role="date" data-icon="grid" data-iconpos="left">
+        <div class="ui-field-contain" style="width:80%;margin:0 auto">
+          <p>Start Date</p>
+          <label for="startdate" class="ui-btn-inline datapicker-label">
+            <span class="ui-btn ui-shadow ui-icon-calendar ui-btn-icon-notext ui-btn-inline"></span>
+          </label>
+          <input type="text" data-role="date" id="startdate" class="ui-btn-inline">
+        </div>
+        <div class="ui-field-contain" style="width:80%;margin:0 auto">
+          <p>End Date</p>
+          <label for="enddate" class="ui-btn-inline datapicker-label">
+            <span class="ui-btn ui-shadow ui-icon-calendar ui-btn-icon-notext ui-btn-inline"></span>
+          </label>
+          <input type="text" data-role="date" id="enddate" class="ui-btn-inline">
+        </div>
+        <input type="range" name="slider-2" id="slider-2" data-highlight="true" min="0" max="100" value="50">
       </form>
+    </div>
+    <!-- /content -->
+
+    <footer data-role="footer" data-position="fixed" class="ui-grid-a">
+      <div class="ui-block-a"></div>
+      <div class="ui-block-b">
+        <a href="#secondStep" data-role="button" id="nextStep" class="ui-btn ui-corner-all btn">Next</a>
+      </div>
+      <div class="ui-block-c"></div>
+    </footer>
+    <!-- /footer -->
+  </div>
+  <!-- /page -->
+
+  <!-- Start of newTrip secondStep page -->
+  <div data-role = "page" id="secondStep">
+    <header data-role="header" data-fullscreen="true" data-theme="a">
+      <h1>New Trip</h1>
+    </header>
+    <!-- /header -->
+
+    <div role = "main" class = "ui-content">
+
     </div>
     <!-- /content -->
 

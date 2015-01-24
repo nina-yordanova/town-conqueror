@@ -1,3 +1,4 @@
+
 body {
   text-transform  : none;
 }
@@ -82,4 +83,15 @@ p.error {
 }
 .ui-field-contain {
   border  : none;
+}
+.coordinates {
+  font-size : 12px;
+  margin    : 0px;
+}
+label.datapicker-label {
+  margin  : -8px 2px 0 0;
+  width   : 8%;
+}
+label.datapicker-label span {
+  border  : 1px solid #43911a !important;
 }
