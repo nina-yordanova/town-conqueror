@@ -139,7 +139,10 @@
           </label>
           <input type="text" data-role="date" id="enddate" class="ui-btn-inline">
         </div>
-        <input type="range" name="slider-2" id="slider-2" data-highlight="true" min="0" max="100" value="50">
+        <div class="ui-field-contain">
+          <p><label for="tripName" class="ui-btn-inline center">Trip name</label></p>
+          <input type="text" id="tripName">
+        </div>
       </form>
     </div>
     <!-- /content -->
@@ -147,7 +150,7 @@
     <footer data-role="footer" data-position="fixed" class="ui-grid-a">
       <div class="ui-block-a"></div>
       <div class="ui-block-b">
-        <a href="#secondStep" data-role="button" id="nextStep" class="ui-btn ui-corner-all btn">Next</a>
+        <a href="#" data-role="button" id="nextStep" class="ui-btn ui-corner-all btn">Next</a>
       </div>
       <div class="ui-block-c"></div>
     </footer>
@@ -163,16 +166,102 @@
     <!-- /header -->
 
     <div role = "main" class = "ui-content">
-
+      <p><label>I want to see</label></p>
+      <div class="ui-grid-a ui-responsive">
+        <div class="ui-block-a">
+          <label for = "museums">
+            <input type="checkbox" name="museums" id="museums">Museums
+          </label>
+        </div>
+        <div class="ui-block-b">
+          <label for = "churchs">
+            <input type="checkbox" name="churchs" id="churchs">Churchs
+          </label>
+        </div>
+      </div>
+      <div class="ui-grid-a ui-responsive">
+        <div class="ui-block-a">
+          <label for = "pyramids">
+            <input type="checkbox" name="pyramids" id="pyramids">Pyramids
+          </label>
+        </div>
+        <div class="ui-block-b">
+          <label for = "caves">
+            <input type="checkbox" name="caves" id="caves">Caves
+          </label>
+        </div>
+      </div>
+      <div class="ui-grid-a ui-responsive">
+        <div class="ui-block-a">
+          <label for = "monuments">
+            <input type="checkbox" name="monuments" id="monuments">Monuments
+          </label>
+        </div>
+        <div class="ui-block-b">
+          <label for = "castles">
+            <input type="checkbox" name="castles" id="castles">Castles
+          </label>
+        </div>
+      </div>
+      <div class="ui-grid-a ui-responsive">
+        <div class="ui-block-a">
+          <label for = "lakes">
+            <input type="checkbox" name="lakes" id="lakes">Lakes
+          </label>
+        </div>
+        <div class="ui-block-b">
+          <label for = "antique-buildings">
+            <input type="checkbox" name="antique-buildings" id="antique-buildings">Antique buildings
+          </label>
+        </div>
+      </div>
+      <div class="ui-grid-a ui-responsive">
+        <div class="ui-block-a">
+          <label for = "cafes">
+            <input type="checkbox" name="cafes" id="cafes">Cafes and restaurants
+          </label>
+        </div>
+        <div class="ui-block-b">
+          <label for = "markets">
+            <input type="checkbox" name="markets" id="markets">Markets
+          </label>
+        </div>
+      </div>
     </div>
     <!-- /content -->
 
     <footer data-role="footer" data-position="fixed" class="ui-grid-a">
       <div class="ui-block-a"></div>
       <div class="ui-block-b">
-        <a href="#secondStep" data-role="button" id="nextStep" class="ui-btn ui-corner-all btn">Next</a>
+        <a href="#makeTrip" data-role="button" id="saveTrip" class="ui-btn ui-corner-all btn">Save</a>
       </div>
       <div class="ui-block-c"></div>
+    </footer>
+    <!-- /footer -->
+  </div>
+  <!-- /page -->
+
+  <!-- Start of home page -->
+  <div data-role = "page" id="makeTrip">
+    <header data-role="header" data-fullscreen="true" data-theme="a">
+      <h1></h1>
+    </header>
+    <!-- /header -->
+
+    <div role = "main" class = "ui-content">
+      <div data-role="page" id="map-page" data-url="map-page">
+        <div data-role="header" data-theme="a">
+          <h1>Maps</h1>
+        </div>
+        <div role="main" class="ui-content" id="map-canvas">
+          <!-- map loads here... -->
+        </div>
+      </div>
+    </div>
+    <!-- /content -->
+
+    <footer data-role="footer" data-position="fixed" class="ui-grid-a">
+
     </footer>
     <!-- /footer -->
   </div>
@@ -183,6 +272,7 @@
   <script src = "http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script src="http://cdn.rawgit.com/jquery/jquery-ui/1.10.4/ui/jquery.ui.datepicker.js"></script>
   <script id="mobile-datepicker" src="http://cdn.rawgit.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACbOew5k6U9wUvn1AJsn_0OnkoyJDpDyc"></script>
   <script type = "text/javascript" src = "js/index.js"></script>
   <script type = "text/javascript" src = "js/main.js"></script>
   <script type = "text/javascript">
