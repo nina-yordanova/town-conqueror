@@ -96,3 +96,8 @@ label.datapicker-label span {
   border  : 1px solid #43911a !important;
 }
 #map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }
+#googleMap {
+  min-width:250px;
+  min-height:320px;
+  border : 1px solid #691C00;
+}
